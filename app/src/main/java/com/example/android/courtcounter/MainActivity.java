@@ -10,7 +10,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-    private int runA=0,runB=0,wicketA=0,wicketB=0;
+    private int runA=0;
+    private int runB=0;
+    private int wicketA=0;
+    private int wicketB=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,72 +61,72 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()){
             case R.id.sixA:
                 runA+=6;
-                displayrunA(runA);
+                displayRunA(runA);
                 break;
 
             case R.id.fourA:
                 runA+=4;
-                displayrunA(runA);
+                displayRunA(runA);
                 break;
 
             case R.id.threeA:
                 runA+=3;
-                displayrunA(runA);
+                displayRunA(runA);
                 break;
 
             case R.id.twoA:
                 runA+=2;
-                displayrunA(runA);
+                displayRunA(runA);
                 break;
             case R.id.oneA:
                 runA+=1;
-                displayrunA(runA);
+                displayRunA(runA);
                 break;
 
             case R.id.outA:
                 if(wicketA < 10)
                 {
                     wicketA+=1;
-                    displaywicketA(wicketA);}
+                    displayWicketA(wicketA);}
                 break;
 
             case R.id.sixB:
                 runB+=6;
-                displayrunB(runB);
+                displayRunB(runB);
                 break;
 
             case R.id.fourB:
                 runB+=4;
-                displayrunB(runB);
+                displayRunB(runB);
                 break;
 
             case R.id.threeB:
                 runB+=3;
-                displayrunB(runB);
+                displayRunB(runB);
                 break;
 
             case R.id.twoB:
                 runB+=2;
-                displayrunB(runB);
+                displayRunB(runB);
                 break;
             case R.id.oneB:
                 runB+=1;
-                displayrunB(runB);
+                displayRunB(runB);
                 break;
 
             case R.id.outB:
                 if(wicketB < 10){
                     wicketB+=1;
-                    displaywicketB(wicketB);}
+                    displayWicketB(wicketB);}
                 break;
 
 
             case R.id.reset:
                 runA = runB = wicketA = wicketB = 0;
-                displayrunA(runA);
-                displayrunB(runB);
-                displaywicketA(wicketA);
-                displaywicketB(wicketB);
+                displayRunA(runA);
+                displayRunB(runB);
+                displayWicketA(wicketA);
+                displayWicketB(wicketB);
                 break;
 
         }
@@ -134,28 +137,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     
 
-    private void displayrunA(int r)
+    private void displayRunA(int r)
     {
         TextView runA = (TextView)findViewById(R.id.runA);
-        runA.setText(String.valueOf(r));
+        runA.setText(String.valueOf(r));                             //Sets run of India dynamically
 
     }
     
-    private void displaywicketA(int w){
+    private void displayWicketA(int w){
         TextView wicketA = (TextView)findViewById(R.id.wicketA);
         wicketA.setText(String.valueOf(w));
     }
 
     
 
-    private void displayrunB(int r)
+    private void displayRunB(int r)
     {
         TextView runB = (TextView)findViewById(R.id.runB);
         runB.setText(String.valueOf(r));
 
     }
 
-    private void displaywicketB(int w){
+    private void displayWicketB(int w){
         TextView wicketB = (TextView)findViewById(R.id.wicketB);
         wicketB.setText(String.valueOf(w));
     }
