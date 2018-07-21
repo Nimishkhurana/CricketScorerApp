@@ -7,9 +7,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-
-
-
     private int runA=0;
     private int runB=0;
     private int wicketA=0;
@@ -50,10 +47,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         oneB.setOnClickListener(this);
         outB.setOnClickListener(this);
 
-        reset.setOnClickListener(this);
-        
+        reset.setOnClickListener(this); 
     }
-
 
     @Override
     public void onClick(View view) {
@@ -120,7 +115,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     displayWicketB(wicketB);}
                 break;
 
-
             case R.id.reset:
                 runA = runB = wicketA = wicketB = 0;
                 displayRunA(runA);
@@ -130,18 +124,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
         }
-
-
-
-
     }
     
-
     private void displayRunA(int r)
     {
         TextView runA = (TextView)findViewById(R.id.runA);
         runA.setText(String.valueOf(r));                             //Sets run of India dynamically
-
     }
     
     private void displayWicketA(int w){
@@ -151,17 +139,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     
 
-    private void displayRunB(int r)
-    {
+    private void displayRunB(int r) {
         TextView runB = (TextView)findViewById(R.id.runB);
         runB.setText(String.valueOf(r));
-
     }
 
     private void displayWicketB(int w){
         TextView wicketB = (TextView)findViewById(R.id.wicketB);
         wicketB.setText(String.valueOf(w));
     }
-
-
 }
